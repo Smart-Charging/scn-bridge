@@ -21,7 +21,7 @@ export const testToken: IToken = {
     party_id: "MSP",
     uid: "0102030405",
     type: "AD_HOC_USER",
-    contract_id: "DE-123-XX",
+    contract_id: "FI-123-XX",
     issuer: "test MSP",
     valid: true,
     whitelist: "ALWAYS",
@@ -36,7 +36,7 @@ export const testCredentials: ICredentials = {
 
 export const testLocations: ILocation[] = [
     {
-        "country_code": "BE",
+        "country_code": "DE",
         "party_id": "BEC",
         "id": "LOC1",
         "publish": true,

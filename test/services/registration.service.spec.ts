@@ -37,7 +37,7 @@ describe("Registration Service", () => {
         const got = await registrationService.getNodeInfo("http://localhost:3001")
         const want = {
             url: "http://localhost:3001",
-            address: "0x63937aBd9308ad672Df9A2a1dcb1b38961f29C11"
+            address: "0x7ab1a34dEb3209a1d6Fd57Ae5f2f81E857bc5ba1"
         }
 
         assert.deepEqual(got, want)
@@ -50,7 +50,7 @@ describe("Registration Service", () => {
         const testCases: IIsListedTestCase[] = [
             {
                 name: "already registered",
-                registry: new PluggableRegistryStub("http://localhost:3001", "0x63937aBd9308ad672Df9A2a1dcb1b38961f29C11"),
+                registry: new PluggableRegistryStub("http://localhost:3001", "0x7ab1a34dEb3209a1d6Fd57Ae5f2f81E857bc5ba1"),
                 want: registryListing.OK
             },
             {
@@ -60,7 +60,7 @@ describe("Registration Service", () => {
             },
             {
                 name: "needs updating 1",
-                registry: new PluggableRegistryStub("http://localhost:3002", "0x63937aBd9308ad672Df9A2a1dcb1b38961f29C11"),
+                registry: new PluggableRegistryStub("http://localhost:3002", "0x7ab1a34dEb3209a1d6Fd57Ae5f2f81E857bc5ba1"),
                 want: registryListing.UPDATE_REQUIRED
             },
             {
@@ -76,7 +76,7 @@ describe("Registration Service", () => {
                 const modifiedRegistrationService = new RegistrationService(test.registry, db)
                 const got = await modifiedRegistrationService.isListedInRegistry("DE", "MSP", {
                     url: "http://localhost:3001",
-                    address: "0x63937aBd9308ad672Df9A2a1dcb1b38961f29C11"
+                    address: "0x7ab1a34dEb3209a1d6Fd57Ae5f2f81E857bc5ba1"
                 })
                 assert.equal(got, test.want)
             })

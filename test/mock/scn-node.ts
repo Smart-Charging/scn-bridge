@@ -38,7 +38,7 @@ export const startNode = async (port: number, events: EventEmitter = new EventEm
     node.get("/scn/registry/node-info", async (_, res) => {
         res.send({
             url: `http://localhost:${port}`,
-            address: "0x63937aBd9308ad672Df9A2a1dcb1b38961f29C11"
+            address: "0x7ab1a34dEb3209a1d6Fd57Ae5f2f81E857bc5ba1"
         })
     })
 
