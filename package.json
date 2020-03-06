@@ -1,0 +1,40 @@
+{
+  "name": "@smartcharging/scn-bridge",
+  "version": "1.0.0",
+  "description": "EVs Charging Bridge for the Smart Charging Network configurable for any proprietary API",
+  "repository": "https://github.com/Smart-Charging/scn-bridge.git",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run lint && tsc",
+    "prepare": "npm run build",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "test": "npm run lint && mocha -r ts-node/register 'test/**/*.spec.ts'"
+  },
+  "author": "eMobilify GmbH",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/chai": "^4.2.3",
+    "@types/express": "^4.17.1",
+    "@types/mocha": "^5.2.7",
+    "@types/morgan": "^1.7.37",
+    "@types/node": "^12.7.5",
+    "@types/node-fetch": "^2.5.1",
+    "@types/supertest": "^2.0.8",
+    "@types/uuid": "^3.4.5",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "supertest": "^4.0.2",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@smartcharging/scn-registry": "^0.1.0",
+    "body-parser": "^1.19.0",
+    "ethers": "^4.0.37",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.6.0",
+    "uuid": "^3.3.3"
+  }
+}
